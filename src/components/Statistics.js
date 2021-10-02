@@ -17,7 +17,8 @@ background-color: #F0F1F6;
 `
 
 const StyledH2 = styled.h2`
-padding: 80% 0 10% 0;
+margin: 0;
+padding: 20% 0 10% 0;
 font-size: 30px;
 font-weight: 700;
 text-align: center;
