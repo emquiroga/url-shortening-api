@@ -18,3 +18,18 @@ html {
 *::after {
   box-sizing: inherit;
 }
+.isOpen > span:first-child {
+  transform: rotate(45deg);
+}
+
+.isOpen > span:nth-child(2) {
+  opacity: 0;
+}
+
+.isOpen > span:last-child {
+  transform: rotate(-45deg);
+}
+.isOpen span {
+  transition: all 150ms ease-out;
+  transform-origin: 1.75px 1.75px;
+}

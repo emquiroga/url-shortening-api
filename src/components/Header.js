@@ -23,11 +23,12 @@ text-align: center;
 font-family: 'Poppins', sans-serif;
 color: hsl(255, 11%, 22%);
 `
-const StyledDescription = styled.p`
-margin: 5% 10%;
+export const StyledDescription = styled.p`
+margin: 5% 5% 30% 5%;
 color: hsl(257, 7%, 63%);
 text-align: center;
 font-size: 18px;
+line-height: 2rem;
 `
 
 export const Header = () => {

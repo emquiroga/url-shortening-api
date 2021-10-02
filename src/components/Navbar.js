@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import Logo from "../assets/logo.svg"
 
@@ -11,30 +11,37 @@ display: flex;
 flex-flow: row;
 position: relative;
 `
-const StyledLogo = styled.img`
+export const StyledLogo = styled.img`
 margin: 2rem;
 `
 const StyledWrapper = styled.div`
 position: absolute;
 top: 30px;
 right: 5%;
-display: flex;
-flex-flow: column;
-justify-content: space-around;
-width: 50px;
-height: 35px;
+width: 26px;
+height: auto;
+display: block;
 `
 const StyledSpan = styled.span`
 display: block;
-width: 35px;
-height: 4px;
+width: 26px;
+height: 3px;
 background-color: hsl(0, 0%, 75%);
+&:not(:last-child) {
+          margin-bottom: 5px;
+        }
 `
+    
 export const Navbar = () => {
+    const [closed, setOpen] = useState(true)
+    const open = () => setOpen(!closed)
     return (
         <StyledNavbar>
             <StyledLogo src={Logo} alt="Logo"/>
-            <StyledWrapper>
+            <StyledWrapper 
+            className={closed === true ? "" : "isOpen"}
+            onClick={open}
+            >
                 <StyledSpan></StyledSpan>
                 <StyledSpan></StyledSpan>
                 <StyledSpan></StyledSpan>
