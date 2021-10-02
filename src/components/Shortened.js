@@ -33,15 +33,15 @@ font-family: 'Poppins', sans-serif;
 background-color: hsl(180, 66%, 49%);
 `
 
-export const Shortened = () => {
+export const Shortened = ({src, link}) => {
     return(
         <ShortenedWrapper>
             <ShortenedSrc>
-                Use some props here
+                {src} Props here
             </ShortenedSrc>
             <hr style={{margin: 0}}/>
             <ShortenedOutput>
-                Use other props here
+                {link} Props here
             </ShortenedOutput>
             <CopyBtn>
                 Copy

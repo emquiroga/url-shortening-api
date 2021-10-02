@@ -1,6 +1,7 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 import bgmobile from '../assets/bg-shorten-mobile.svg'
+import shortLinks from "../services/ShortLinks";
 import { Shortened } from "./Shortened";
 
 const StyledShorten = styled.section`
@@ -16,11 +17,6 @@ const StyledWrapper = styled.div`
 width: 90%;
 padding: 0;
 margin: auto;
-/* position: absolute;
-top: 0;
-left: 50%;
-transform: translate(-50%, -40%);
-z-index: 999; */
 background-color: hsl(260, 8%, 14%);
 background-image: url(${bgmobile});
 background-position: top;
@@ -75,6 +71,13 @@ export const Shorten = () => {
         setValue(event.target.value)
     }
 
+    
+    const [link, setLink] = useState("")
+    
+    useEffect(function () {
+        shortLinks({myLink : 'https://www.youtube.com/watch?v=QBLbXgeXMU8&t=737s&ab_channel=midudev'}).then(link => setLink(link))
+    }, [])
+
     return (
         <StyledShorten>
             <StyledWrapper>
@@ -95,9 +98,15 @@ export const Shorten = () => {
                     Shorten it!
                 </StyledButton>
             </StyledWrapper>
-            <Shortened />
-            <Shortened />
-            <Shortened />
+            <Shortened 
+            link={link}
+            />
+            <Shortened 
+            link={link}
+            />
+            <Shortened 
+            link={link}
+            />
         </StyledShorten>
     )
 }
