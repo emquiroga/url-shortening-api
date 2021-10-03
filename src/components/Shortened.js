@@ -19,6 +19,9 @@ const ShortenedOutput = styled.p`
 margin: auto;
 padding: 1rem;
 font-size: 18px;
+`
+const StyledLink = styled.a`
+text-decoration: none;
 color: hsl(180, 66%, 49%);
 `
 const CopyBtn = styled.button`
@@ -41,7 +44,12 @@ export const Shortened = ({src, link}) => {
             </ShortenedSrc>
             <hr style={{margin: 0}}/>
             <ShortenedOutput>
-                {link} Props here
+                <StyledLink 
+                href={link}
+                target="_blank"
+                >
+                    {link}
+                </StyledLink>
             </ShortenedOutput>
             <CopyBtn>
                 Copy

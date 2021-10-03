@@ -1,6 +1,6 @@
 
 
-export default function shortLinks ({myLink = 'https://clixs-dev.netlify.app/'} = {}) {
+export default function shortLinks ({myLink}) {
     const apiURL = `https://api.shrtco.de/v2/shorten?url=${myLink}`
     return fetch(apiURL)
     .then(res => res.json())
@@ -9,5 +9,8 @@ export default function shortLinks ({myLink = 'https://clixs-dev.netlify.app/'} 
         const shortLink = result.short_link
         console.log(shortLink)
         return shortLink
+    })
+    .catch((error) => {
+        alert(`There's an error at your link. See ${error}`)
     })
 }

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import bgmobile from '../assets/bg-shorten-mobile.svg'
 import shortLinks from "../services/ShortLinks";
@@ -13,7 +13,7 @@ position: relative;
 background: linear-gradient(180deg, white 50%, #F0F1F6);
 
 `
-const StyledWrapper = styled.div`
+const StyledForm = styled.form`
 width: 90%;
 padding: 0;
 margin: auto;
@@ -71,16 +71,25 @@ export const Shorten = () => {
         setValue(event.target.value)
     }
 
-    
     const [link, setLink] = useState("")
-    
-    useEffect(function () {
-        shortLinks({myLink : 'https://www.youtube.com/watch?v=QBLbXgeXMU8&t=737s&ab_channel=midudev'}).then(link => setLink(link))
-    }, [])
+
+    const submit = (event) => {
+        event.preventDefault();
+        shortLinks({myLink: value})
+        .then(link => setLink(link))
+    }
+    const validLink = new RegExp(
+        `shrtco.de/[a-zA-Z0-9._:$!%-]`
+    )
+
+    // useEffect(function () {
+    //     shortLinks({myLink : 'https://www.youtube.com/watch?v=QBLbXgeXMU8&t=737s&ab_channel=midudev'}).then(link => setLink(link))
+    // }, [])
 
     return (
         <StyledShorten>
-            <StyledWrapper>
+            <StyledForm
+            onSubmit={submit}>
                 <StyledInput 
                 placeholder="Shorten a link here..."
                 value={value}
@@ -94,19 +103,28 @@ export const Shorten = () => {
                 :
                 null
                 }
-                <StyledButton>
+                <StyledButton
+                type="submit"
+                >
                     Shorten it!
                 </StyledButton>
-            </StyledWrapper>
-            <Shortened 
-            link={link}
-            />
-            <Shortened 
-            link={link}
-            />
-            <Shortened 
-            link={link}
-            />
+            </StyledForm>
+            {link.match(validLink)
+            ?
+            <>
+                <Shortened 
+                link={link}
+                />
+                <Shortened 
+                link={link}
+                />
+                <Shortened 
+                link={link}
+                />
+            </>
+            :
+            null
+            }
         </StyledShorten>
     )
 }
