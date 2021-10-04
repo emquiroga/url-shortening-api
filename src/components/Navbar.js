@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import styled from "styled-components";
+import { Menu } from './Menu';
 import Logo from "../assets/logo.svg"
 
 const StyledNavbar = styled.nav`
@@ -15,12 +16,13 @@ export const StyledLogo = styled.img`
 margin: 2rem;
 `
 const StyledWrapper = styled.div`
-position: absolute;
+position: fixed;
 top: 30px;
 right: 5%;
 width: 26px;
 height: auto;
 display: block;
+z-index: 9999999999999;
 `
 const StyledSpan = styled.span`
 display: block;
@@ -34,18 +36,24 @@ background-color: hsl(0, 0%, 75%);
     
 export const Navbar = () => {
     const [closed, setOpen] = useState(true)
-    const open = () => setOpen(!closed)
+
+    const toggle = () => {
+        setOpen(!closed)
+    }
     return (
         <StyledNavbar>
             <StyledLogo src={Logo} alt="Logo"/>
             <StyledWrapper 
             className={closed === true ? "" : "isOpen"}
-            onClick={open}
+            onClick={toggle}
             >
                 <StyledSpan></StyledSpan>
                 <StyledSpan></StyledSpan>
                 <StyledSpan></StyledSpan>
             </StyledWrapper>
+            <Menu 
+            show={closed}
+            />
         </StyledNavbar>
     )
 }

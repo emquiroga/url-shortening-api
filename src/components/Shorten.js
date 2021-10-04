@@ -4,6 +4,7 @@ import bgmobile from '../assets/bg-shorten-mobile.svg'
 import shortLinks from "../services/ShortLinks";
 import { Shortened } from "./Shortened";
 
+
 const StyledShorten = styled.section`
 width: 100%;
 height: auto;
@@ -62,6 +63,7 @@ background-color: hsl(180, 66%, 49%);
 color: white;
 border: none;
 border-radius: 3px;
+cursor: pointer;
 `
 
 export const Shorten = () => {
@@ -72,9 +74,9 @@ export const Shorten = () => {
     }
 
     const [link, setLink] = useState("")
-
+    
     const submit = (event) => {
-        event.preventDefault();
+        event.preventDefault()
         shortLinks({myLink: value})
         .then(link => setLink(link))
     }
@@ -82,9 +84,11 @@ export const Shorten = () => {
         `shrtco.de/[a-zA-Z0-9._:$!%-]`
     )
 
-    // useEffect(function () {
-    //     shortLinks({myLink : 'https://www.youtube.com/watch?v=QBLbXgeXMU8&t=737s&ab_channel=midudev'}).then(link => setLink(link))
-    // }, [])
+    // useEffect(function submit (event) {
+    //  event.preventDefault()
+    //     shortLinks({myLink: value})
+    //     .then(link => setLink(link))
+    // }, [value])
 
     return (
         <StyledShorten>
@@ -112,13 +116,16 @@ export const Shorten = () => {
             {link.match(validLink)
             ?
             <>
-                <Shortened 
+                <Shortened
+                src="https://www.yourwebsite.com" 
                 link={link}
                 />
-                <Shortened 
+                <Shortened
+                src="https://twitter.com/yourprofile" 
                 link={link}
                 />
-                <Shortened 
+                <Shortened
+                src="https://www.linkedin.com/yourprofile" 
                 link={link}
                 />
             </>

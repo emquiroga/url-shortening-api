@@ -7,7 +7,6 @@ export default function shortLinks ({myLink}) {
     .then(response => {
         const {result} = response
         const shortLink = result.short_link
-        console.log(shortLink)
         return shortLink
     })
     .catch((error) => {

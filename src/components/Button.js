@@ -12,6 +12,7 @@ border-radius: 2rem;
 font-size: 20px;
 font-weight: 700;
 color: white;
+cursor: pointer;
 `
 const StartedButton = () => {
     return (
