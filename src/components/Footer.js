@@ -1,49 +1,25 @@
 import React from "react"
 import styled from "styled-components"
+import './footer.css'
 import { Social } from "./Social"
 
-
-const StyledFooter = styled.footer`
-width: 100%;
-margin: 0;
-padding: 0;
-display: flex;
-flex-flow: column;
-background-color: hsl(260, 8%, 14%);
-`
-const StyledShortly = styled.h2`
-margin: 0;
-padding: 4rem 0;
-font-size: 40px;
-color: white;
-text-align: center;
-`
-const StyledH3 = styled.h3`
-margin: 2rem auto;
-font-size: 18px;
-font-weight: 700;
-color: white;
-text-align: center;
-
-`
 const StyledLink = styled.a`
 text-decoration: none;
 color: hsl(0, 0%, 75%);
 text-align: center;
 margin: .5rem auto;
-
 `
 
 export const Footer = () =>  {
     return (
-        <StyledFooter>
-            <StyledShortly>
+        <footer>
+            <h2 className="shortly">
                 Shortly
-            </StyledShortly>
+            </h2>
             <>
-                <StyledH3>
+                <h3>
                     Features
-                </StyledH3>
+                </h3>
                 <StyledLink>
                     Link Shortening
                 </StyledLink>
@@ -55,9 +31,9 @@ export const Footer = () =>  {
                 </StyledLink>
             </>
             <>    
-                <StyledH3>  
+                <h3>  
                     Resources
-                </StyledH3>
+                </h3>
                 <StyledLink>
                     Blog
                 </StyledLink>
@@ -69,9 +45,9 @@ export const Footer = () =>  {
                 </StyledLink>
             </>
             <>
-                <StyledH3>
+                <h3>
                     Company
-                </StyledH3>
+                </h3>
                 <StyledLink>
                     About
                 </StyledLink>
@@ -86,6 +62,6 @@ export const Footer = () =>  {
                 </StyledLink>
             </>
             <Social />
-        </StyledFooter>
+        </footer>
     )
 }

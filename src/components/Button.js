@@ -4,7 +4,6 @@ import styled from "styled-components"
 const StyledStarted = styled.button`
 display: block;
 width: 200px;
-height: 55px;
 margin: auto;
 background-color: hsl(180, 66%, 49%);
 border: none;

@@ -1,22 +1,11 @@
 import React, {useState} from "react";
 import styled from "styled-components";
+import './navbar.css'
 import { Menu } from './Menu';
 import Logo from "../assets/logo.svg"
 
-const StyledNavbar = styled.nav`
-width: 100%;
-height: 100px;
-margin: 0;
-padding: 0;
-display: flex;
-flex-flow: row;
-position: relative;
-`
-export const StyledLogo = styled.img`
-margin: 2rem;
-`
 const StyledWrapper = styled.div`
-position: fixed;
+position: absolute;
 top: 30px;
 right: 5%;
 width: 26px;
@@ -39,10 +28,11 @@ export const Navbar = () => {
 
     const toggle = () => {
         setOpen(!closed)
+        document.getElementById('body').classList.toggle('no-scroll')
     }
     return (
-        <StyledNavbar>
-            <StyledLogo src={Logo} alt="Logo"/>
+        <nav>
+            <img src={Logo} alt="Logo"/>
             <StyledWrapper 
             className={closed === true ? "" : "isOpen"}
             onClick={toggle}
@@ -54,6 +44,6 @@ export const Navbar = () => {
             <Menu 
             show={closed}
             />
-        </StyledNavbar>
+        </nav>
     )
 }

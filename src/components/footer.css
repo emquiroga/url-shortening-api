@@ -1,0 +1,22 @@
+footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  background-color: hsl(260, 8%, 14%);
+}
+h2 {
+  margin: 0;
+  padding: 4rem 0 0 0;
+  font-size: 34px;
+  color: white;
+  text-align: center;
+}
+h3 {
+  margin: 2rem auto;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}

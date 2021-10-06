@@ -1,0 +1,57 @@
+.shorten {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: linear-gradient(180deg, white 50%, #f0f1f6 0 100%);
+}
+form {
+  width: 90%;
+  padding: 0;
+  margin: auto;
+  background-color: hsl(257, 27%, 26%);
+  background-image: url("../assets/bg-shorten-mobile.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 1rem;
+}
+input {
+  width: 80%;
+  margin: 10% 10% 0 10%;
+  padding: 0.5rem 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  outline: none;
+  border: 3px solid transparent;
+}
+input::placeholder {
+  padding: 0 0 0 1rem;
+  color: hsl(0, 0%, 75%);
+}
+input:focus {
+  border: 3px inset hsl(0, 87%, 67%);
+}
+span {
+  display: block;
+  margin: 0 10%;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  color: hsla(0, 87%, 67%, 0.75);
+}
+button {
+  width: 80%;
+  margin: 10%;
+  padding: 0.75rem 0;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  background-color: hsl(180, 66%, 49%);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}

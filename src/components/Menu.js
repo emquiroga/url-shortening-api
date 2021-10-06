@@ -4,18 +4,17 @@ import styled from "styled-components";
 const StyledMenu = styled.div`
 width: 90%;
 height: auto;
-position: fixed;
+position: absolute;
 margin: 30% 5% 0 5%;
 display: flex;
 flex-flow: column;
 background-color: hsl(257, 27%, 26%);
 text-align: center;
 border-radius: 1rem;
-
 z-index: 9999;
 `
 const StyledLink = styled.a`
-margin: 1.75rem;
+margin: 1.5rem;
 text-decoration: none;
 color: white;
 `

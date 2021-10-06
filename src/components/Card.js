@@ -1,45 +1,29 @@
 import React from "react"
 import styled from "styled-components"
-import {StyledDescription} from "./Header"
+import './card.css'
 
-
-const StyledCard = styled.div `
-width: 90%;
-margin: 0 auto;
-padding-bottom: 1px;
-position: relative;
-background-color: white;
-`
-const StyledH3 = styled.h3 `
-font-size: 20px;
-font-weight: 700;
-text-align: center;
-color: hsl(255, 11%, 22%);
-margin: 10% 0;
-padding-top: 20%;
-`
 const StyledIcon = styled.img`
 position: absolute;
-top: 0;
+top: -30px;
 left: 50%;
 padding: 1rem;
-transform: translate(-50%, -50%);
+transform: translate(-95%, -50%);
 background-color: hsl(257, 27%, 26%);
 border-radius: 50%;
 z-index: 999;
 `
 export const Card = ({bg, title, description}) => {
     return (
-        <StyledCard>
+        <div className="card">
             <StyledIcon 
             src={bg}
             />
-            <StyledH3>
+            <h3 className="card-title">
                 {title}
-            </StyledH3>
-            <StyledDescription>
+            </h3>
+            <p>
                 {description}
-            </StyledDescription>
-        </StyledCard>
+            </p>
+        </div>
     )
 }

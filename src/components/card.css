@@ -1,0 +1,23 @@
+.card {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 1px;
+  position: relative;
+  background-color: white;
+  border-radius: 5px;
+}
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: hsl(255, 11%, 22%);
+  margin: 10% 0;
+  padding-top: 20%;
+}
+p {
+  margin: 0 5% 20% 5%;
+  color: hsl(257, 7%, 63%);
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.8rem;
+}
