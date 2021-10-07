@@ -66,8 +66,31 @@ button {
   border-radius: 3px;
   cursor: pointer;
 }
+button:hover {
+  background-color: white;
+  color: hsl(257, 27%, 26%);
+  transition: all 150ms ease-in-out;
+  border: 1px inset hsl(257, 27%, 26%);
+}
 @media (min-width: 769px) {
   button {
     margin: 5% 10%;
+  }
+}
+@media (min-width: 1024px) {
+  form {
+    display: flex;
+    flex-flow: row;
+  }
+  input {
+    width: 100%;
+    margin: 5%;
+  }
+  span {
+    margin: auto;
+  }
+  button {
+    width: 280px;
+    margin: auto 5%;
   }
 }

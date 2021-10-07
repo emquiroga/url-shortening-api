@@ -16,7 +16,7 @@ export const Footer = () =>  {
             <h2 className="shortly">
                 Shortly
             </h2>
-            <>
+            <div className="features">
                 <h3>
                     Features
                 </h3>
@@ -29,8 +29,8 @@ export const Footer = () =>  {
                 <StyledLink>
                     Analytics
                 </StyledLink>
-            </>
-            <>    
+            </div>
+            <div className="resources">  
                 <h3>  
                     Resources
                 </h3>
@@ -43,8 +43,8 @@ export const Footer = () =>  {
                 <StyledLink>
                     Support
                 </StyledLink>
-            </>
-            <>
+                </div>
+                <div className="company">
                 <h3>
                     Company
                 </h3>
@@ -60,8 +60,8 @@ export const Footer = () =>  {
                 <StyledLink>
                     Contact
                 </StyledLink>
-            </>
-            <Social />
+                </div>
+            <Social /> 
         </footer>
     )
 }

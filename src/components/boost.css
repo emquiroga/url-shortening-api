@@ -8,3 +8,8 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (min-width: 1024px) {
+  .boost {
+    padding: 5% 0 10% 0;
+  }
+}

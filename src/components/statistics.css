@@ -1,6 +1,6 @@
 section {
   width: 100%;
-  padding-bottom: 20%;
+  height: auto;
   position: relative;
   background-color: #f0f1f6;
 }
@@ -36,14 +36,28 @@ section {
 .divider {
   display: block;
   width: 8px;
-  height: 100px;
+  height: 50px;
   content: "";
   margin: 0 auto;
   background-color: hsl(180, 66%, 49%);
 }
 @media (min-width: 1024px) {
+  .advanced-description {
+    width: 40%;
+    margin: auto auto 10% auto;
+    font-size: 24px;
+    line-height: 3rem;
+  }
   .divider {
     height: 8px;
-    width: 50px;
+    width: 100%;
+  }
+  #divider-1 {
+    grid-row: 3/4;
+    grid-column: 4/6;
+  }
+  #divider-2 {
+    grid-row: 4/5;
+    grid-column: 8/10;
   }
 }

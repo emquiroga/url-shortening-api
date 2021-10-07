@@ -42,6 +42,12 @@ font-size: 16px;
 font-family: 'Poppins', sans-serif;
 color: white;
 cursor: pointer;
+
+&:hover {
+    background-color: white; 
+    color:hsl(257, 27%, 26%);
+    transition: all 150ms ease-in-out;
+}
 `
 
 export const Menu = ({show}) => {

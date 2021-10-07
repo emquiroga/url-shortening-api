@@ -23,7 +23,7 @@ export const Home = () => {
             bg={brand}
             />
             
-            <div className="divider"></div>
+            <div className="divider" id="divider-1"></div>
 
             <Card 
             title="Detailed Records"
@@ -32,7 +32,7 @@ export const Home = () => {
             bg={detailed}
             />
 
-            <div className="divider"></div>
+            <div className="divider" id="divider-2"></div>
 
             <Card 
             title="Fully Customizable"

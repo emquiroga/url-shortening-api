@@ -67,6 +67,11 @@
   color: white;
   cursor: pointer;
 }
+.button-header:hover {
+  color: white;
+  background-color: hsl(257, 27%, 26%);
+  transition: all 150ms ease-in-out;
+}
 @media (min-width: 769px) {
   .button-header {
     margin-left: 17.5%;

@@ -14,6 +14,9 @@ font-size: 20px;
 font-family: 'Poppins', sans-serif;
 background-color: hsl(180, 66%, 49%);
 cursor: pointer;
+@media (min-width: 1024px) {
+    width: 15%;
+}
 `
 const CopiedBtn = styled.button`
 width: 80%;
@@ -26,6 +29,9 @@ font-size: 20px;
 font-family: 'Poppins', sans-serif;
 background-color:hsl(257, 27%, 26%);
 cursor: pointer;
+@media (min-width: 1024px) {
+    width: 15%;
+}
 `
 export const Shortened = ({src, link}) => {
     const [copy, setCopy] = useState(false)
@@ -34,7 +40,7 @@ export const Shortened = ({src, link}) => {
             <p className="link-for">
                 {src}
             </p>
-            <hr style={{margin: 0}}/>
+            <hr />
             <p className="link-output">
                 <a className="shortened-link" 
                 href={`https://${link}`}

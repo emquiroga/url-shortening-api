@@ -21,8 +21,33 @@ nav {
   width: 125px;
   height: 38px;
 }
+@media (max-width: 768px) {
+  .mobile-menu {
+    position: absolute;
+    top: 30px;
+    right: 5%;
+    width: 28px;
+    height: auto;
+    display: block;
+    z-index: 9999999999999;
+  }
+  .span-menu {
+    display: block;
+    width: 28px;
+    height: 4px;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 75%);
+  }
+  .span-menu:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
 
-//MOBILE MENU CLASSES
+.isOpen span {
+  transition: all 150ms ease-out;
+  transform-origin: 2px 2px;
+}
 
 .isOpen > span:first-child {
   transform: rotate(45deg);
@@ -35,11 +60,7 @@ nav {
 .isOpen > span:last-child {
   transform: rotate(-45deg);
 }
-.isOpen span {
-  transition: all 150ms ease-out;
-  transform-origin: 1.75px 1.75px;
-}
-//LOCK SCROLL WHEN MENU IS OPEN
+
 .no-scroll {
   overflow: hidden;
 }
