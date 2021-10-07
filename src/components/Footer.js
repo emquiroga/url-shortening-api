@@ -8,6 +8,11 @@ text-decoration: none;
 color: hsl(0, 0%, 75%);
 text-align: center;
 margin: .5rem auto;
+
+&:hover {
+    cursor: pointer;
+    color: hsl(180, 66%, 49%);
+}
 `
 
 export const Footer = () =>  {

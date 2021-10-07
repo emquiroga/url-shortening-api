@@ -2,7 +2,7 @@
   width: 100%;
   height: auto;
   margin: 0;
-  padding: 0 0 20% 0;
+  padding: 0 0 15% 0;
   background-color: hsl(257, 27%, 26%);
   background-image: url("../assets/bg-boost-mobile.svg");
   background-repeat: no-repeat;
@@ -10,6 +10,25 @@
 }
 @media (min-width: 1024px) {
   .boost {
-    padding: 5% 0 10% 0;
+    padding: 0 0 5% 0;
   }
+}
+.boost-button {
+  display: block;
+  width: 200px;
+  margin: auto;
+  padding: 0.75rem 0;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  background-color: hsl(180, 66%, 49%);
+  color: white;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+.boost-button:hover {
+  opacity: 0.85;
+  transition: all 150ms ease-in-out;
 }

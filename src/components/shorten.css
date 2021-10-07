@@ -52,9 +52,9 @@ span {
   font-style: italic;
   color: hsla(0, 87%, 67%, 0.75);
 }
-button {
+.shorten-button {
   width: 80%;
-  margin: 10%;
+  margin: 5% 10%;
   padding: 0.75rem 0;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
@@ -63,14 +63,12 @@ button {
   background-color: hsl(180, 66%, 49%);
   color: white;
   border: none;
-  border-radius: 3px;
+  border-radius: 0.5rem;
   cursor: pointer;
 }
-button:hover {
-  background-color: white;
-  color: hsl(257, 27%, 26%);
+.shorten-button:hover {
+  opacity: 0.75;
   transition: all 150ms ease-in-out;
-  border: 1px inset hsl(257, 27%, 26%);
 }
 @media (min-width: 769px) {
   button {
@@ -89,7 +87,7 @@ button:hover {
   span {
     margin: auto;
   }
-  button {
+  .shorten-button {
     width: 280px;
     margin: auto 5%;
   }

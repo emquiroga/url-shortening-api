@@ -33,11 +33,12 @@
 }
 @media (min-width: 1440px) {
   .cards-wrapper {
-    width: 80%;
+    width: 70%;
     margin: auto;
   }
   .card {
-    width: 350px;
+    width: 320px;
+    margin: 0;
   }
 }
 .card-title {

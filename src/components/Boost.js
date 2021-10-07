@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import './boost.css'
-import Button from './Button'
+
 
 
 const StyledH2 = styled.h2`
@@ -18,7 +18,7 @@ export const Boost = () => {
             <StyledH2>
                 Boost your links today
             </StyledH2>
-            <Button />
+            <button className="boost-button">Get Started</button>
         </section>
     )
 }

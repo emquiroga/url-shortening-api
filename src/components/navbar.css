@@ -7,11 +7,10 @@ nav {
   flex-flow: row;
   position: relative;
 }
-@media screen and (max-width: 768px) {
-  .logo {
-    margin: 2rem;
-  }
+.logo {
+  margin: 2rem;
 }
+
 @media screen and (min-width: 1024px) {
   .logo {
     margin: 2rem 0 0 6rem;
@@ -27,7 +26,7 @@ nav {
     top: 30px;
     right: 5%;
     width: 28px;
-    height: auto;
+    height: 28px;
     display: block;
     z-index: 9999999999999;
   }
@@ -43,13 +42,36 @@ nav {
     margin-bottom: 5px;
   }
 }
-
+.signup-button {
+  display: none;
+}
+@media (min-width: 769px) {
+  .signup-button {
+    display: block;
+    margin: auto;
+    padding: 0.5rem 1rem;
+    max-width: 115px;
+    background-color: hsl(180, 66%, 49%);
+    border: none;
+    border-radius: 2rem;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+  }
+  .signup-button:hover {
+    opacity: 0.75;
+    transition: all 150ms ease-in-out;
+  }
+}
 .isOpen span {
   transition: all 150ms ease-out;
-  transform-origin: 2px 2px;
+  transform-origin: 17.5%;
 }
 
 .isOpen > span:first-child {
+  margin: auto;
   transform: rotate(45deg);
 }
 
@@ -58,6 +80,7 @@ nav {
 }
 
 .isOpen > span:last-child {
+  margin: auto;
   transform: rotate(-45deg);
 }
 

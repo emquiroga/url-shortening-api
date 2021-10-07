@@ -17,36 +17,23 @@ font-weight: 700;
 &:nth-of-type(4) {
     margin-left: 20%;
 }
-@media (min-width:1440px) {
-    &:nth-of-type(4) {
-    margin-left: 40vw;
-}  
-@media (min-width:1980px) {
-    &:nth-of-type(4) {
-    margin-left: 60vw;
-}
-}
-}
-}
-`
-const DesktopSignup = styled.button `
-display: none;
-@media (min-width: 769px) {
-display: block;
-margin: auto;
-max-width: 115px;
-background-color: hsl(180, 66%, 49%);
-border: none;
-border-radius: 2rem;
-font-size: 16px;
-font-family: 'Poppins', sans-serif;
-color: white;
-cursor: pointer;
 
 &:hover {
-    color: white; 
-    background-color:hsl(257, 27%, 26%);
-    transition: all 150ms ease-in-out;
+    color: hsl(257, 27%, 26%);
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+@media (min-width:1440px) {
+    margin: auto 0 auto 5rem;
+    &:nth-of-type(4) {
+    margin-left: 30vw;
+}  
+@media (min-width:1920px) {
+    margin: auto 0 auto 5rem;
+    &:nth-of-type(4) {
+    margin-left: 50vw;
+}
+}
 }
 }
 `
@@ -66,7 +53,7 @@ export const Navbar = () => {
             <DesktopLink>Pricing</DesktopLink>
             <DesktopLink>Resources</DesktopLink>
             <DesktopLink>Login</DesktopLink>
-            <DesktopSignup>Sign Up</DesktopSignup>
+            <button className="signup-button">Sign Up</button>
             
 
             <div 

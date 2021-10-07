@@ -44,7 +44,7 @@ export const Shorten = () => {
                 :
                 null
                 }
-                <button
+                <button className="shorten-button"
                 type="submit"
                 >
                     Shorten it!
