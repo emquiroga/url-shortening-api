@@ -3,9 +3,12 @@ import styled from "styled-components";
 
 const StyledMenu = styled.div`
 width: 90%;
+max-width: 500px;
 height: auto;
 position: absolute;
-margin: 30% 5% 0 5%;
+top: 80%;
+left: 50%;
+transform: translate(-50%, 0);
 display: flex;
 flex-flow: column;
 background-color: hsl(257, 27%, 26%);
@@ -27,7 +30,7 @@ background-color: grey;
 border: none;
 opacity: 0.75;
 `
-const StyledLogin = styled.button`
+const StyledSignUp = styled.button`
 display: block;
 width: 80%;
 margin: 0 10% 10% 10%;
@@ -53,7 +56,7 @@ export const Menu = ({show}) => {
             <StyledLink>Resources</StyledLink>
             <StyledHr />
             <StyledLink>Login</StyledLink>
-            <StyledLogin>Sign Up</StyledLogin>
+            <StyledSignUp>Sign Up</StyledSignUp>
         </StyledMenu>
         :
         null

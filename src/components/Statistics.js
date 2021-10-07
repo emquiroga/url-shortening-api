@@ -1,5 +1,4 @@
 import React from "react"
-import {StyledDescription} from "./Header"
 import { Card } from "./Card"
 import './statistics.css'
 import brand from '../assets/icon-brand-recognition.svg'
@@ -12,10 +11,11 @@ export const Home = () => {
             <h2 className="advanced">
                 Advanced Statistics
             </h2>
-            <StyledDescription>
+            <p className="advanced-description">
                 Track how your links are performing across the web with
                 our advanced statistics dashboard.
-            </StyledDescription>
+            </p>
+            <div className="cards-wrapper">
             <Card
             title="Brand Recognition"
             description="Boost your brand recognition with each click. Generic links don’t 
@@ -40,6 +40,7 @@ export const Home = () => {
             links, supercharging audience engagement."
             bg={fully}
             />
+            </div>
         </section>
     )
 }

@@ -4,10 +4,10 @@ import './card.css'
 
 const StyledIcon = styled.img`
 position: absolute;
-top: -30px;
+
 left: 50%;
 padding: 1rem;
-transform: translate(-95%, -50%);
+transform: translate(-50%, -50%);
 background-color: hsl(257, 27%, 26%);
 border-radius: 50%;
 z-index: 999;

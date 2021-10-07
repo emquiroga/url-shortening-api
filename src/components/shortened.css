@@ -1,0 +1,23 @@
+.shortened-wrapper {
+  width: 90%;
+  background-color: white;
+  margin: 10% auto 0 auto;
+  border: 2px solid #f0f1f6;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.link-for {
+  margin: auto;
+  padding: 1rem;
+  font-size: 18px;
+  color: hsl(255, 11%, 22%);
+}
+.link-output {
+  margin: auto;
+  padding: 1rem;
+  font-size: 18px;
+}
+.shortened-link {
+  text-decoration: none;
+  color: hsl(180, 66%, 49%);
+}

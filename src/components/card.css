@@ -1,10 +1,33 @@
 .card {
   width: 80%;
+  max-width: 350px;
   margin: 0 auto;
   padding-bottom: 1px;
   position: relative;
   background-color: white;
   border-radius: 5px;
+}
+@media (min-width: 1024px) {
+  .cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+  }
+  .card {
+    width: 230px;
+  }
+  .card:nth-of-type(1) {
+    grid-column: 2/4;
+    grid-row: 1/4;
+  }
+  .card:nth-of-type(3) {
+    grid-column: 6/8;
+    grid-row: 3/6;
+  }
+  .card:nth-of-type(5) {
+    grid-column: 10/12;
+    grid-row: 5/8;
+  }
 }
 .card-title {
   font-size: 20px;

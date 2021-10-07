@@ -1,29 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import './shortened.css'
 
-const ShortenedWrapper = styled.div`
-width: 90%;
-background-color: white;
-margin: 10% auto 0 auto;
-border: 2px solid #F0F1F6;
-border-radius: 10px;
-overflow: hidden;
-`
-const ShortenedSrc = styled.p`
-margin: auto;
-padding: 1rem;
-font-size: 18px;
-color: hsl(255, 11%, 22%);
-`
-const ShortenedOutput = styled.p`
-margin: auto;
-padding: 1rem;
-font-size: 18px;
-`
-const StyledLink = styled.a`
-text-decoration: none;
-color: hsl(180, 66%, 49%);
-`
+
 const CopyBtn = styled.button`
 width: 80%;
 margin: 1rem 5%;
@@ -51,19 +30,20 @@ cursor: pointer;
 export const Shortened = ({src, link}) => {
     const [copy, setCopy] = useState(false)
     return(
-        <ShortenedWrapper>
-            <ShortenedSrc>
+        <div className="shortened-wrapper">
+            <p className="link-for">
                 {src}
-            </ShortenedSrc>
+            </p>
             <hr style={{margin: 0}}/>
-            <ShortenedOutput>
-                <StyledLink 
+            <p className="link-output">
+                <a className="shortened-link" 
                 href={`https://${link}`}
                 target="_blank"
+                rel="noreferrer"
                 >
                     {link}
-                </StyledLink>
-            </ShortenedOutput>
+                </a>
+            </p>
             {copy === false
             ?
             <CopyBtn
@@ -76,6 +56,6 @@ export const Shortened = ({src, link}) => {
                 Copied!
             </CopiedBtn>
             }
-        </ShortenedWrapper>
+        </div>
     )
 }

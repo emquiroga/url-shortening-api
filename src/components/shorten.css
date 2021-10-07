@@ -8,6 +8,7 @@
 }
 form {
   width: 90%;
+  max-width: 1100px;
   padding: 0;
   margin: auto;
   background-color: hsl(257, 27%, 26%);
@@ -17,6 +18,11 @@ form {
   background-size: 100%;
   border-radius: 1rem;
 }
+@media (min-width: 769px) {
+  form {
+    width: 80%;
+  }
+}
 input {
   width: 80%;
   margin: 10% 10% 0 10%;
@@ -25,6 +31,11 @@ input {
   font-size: 20px;
   outline: none;
   border: 3px solid transparent;
+}
+@media (min-width: 769px) {
+  input {
+    margin: 5% 10% 0 10%;
+  }
 }
 input::placeholder {
   padding: 0 0 0 1rem;
@@ -54,4 +65,9 @@ button {
   border: none;
   border-radius: 3px;
   cursor: pointer;
+}
+@media (min-width: 769px) {
+  button {
+    margin: 5% 10%;
+  }
 }

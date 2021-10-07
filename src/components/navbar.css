@@ -7,9 +7,23 @@ nav {
   flex-flow: row;
   position: relative;
 }
-img {
-  margin: 2rem;
+@media screen and (max-width: 768px) {
+  .logo {
+    margin: 2rem;
+  }
 }
+@media screen and (min-width: 1024px) {
+  .logo {
+    margin: 2rem 0 0 6rem;
+  }
+}
+.logo {
+  width: 125px;
+  height: 38px;
+}
+
+//MOBILE MENU CLASSES
+
 .isOpen > span:first-child {
   transform: rotate(45deg);
 }
@@ -25,6 +39,7 @@ img {
   transition: all 150ms ease-out;
   transform-origin: 1.75px 1.75px;
 }
+//LOCK SCROLL WHEN MENU IS OPEN
 .no-scroll {
   overflow: hidden;
 }
