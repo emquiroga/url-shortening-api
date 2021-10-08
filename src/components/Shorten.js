@@ -17,9 +17,9 @@ export const Shorten = () => {
         shortLinks({myLink: value})
         .then(link => setLink(link))
     }
-    const validLink = new RegExp(
-        `shrtco.de/[a-zA-Z0-9._:$!%-]`
-    )
+    // const validLink = new RegExp(
+    //     `shrtco.de/[a-zA-Z0-9._:$!%-]`
+    // )
 
     // useEffect(function submit (event) {
     //  event.preventDefault()
@@ -50,7 +50,7 @@ export const Shorten = () => {
                     Shorten it!
                 </button>
             </form>
-            {link.match(validLink)
+            {link !== ''
             ?
             <>
                 <Shortened

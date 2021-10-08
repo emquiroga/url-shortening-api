@@ -1,5 +1,3 @@
-
-
 export default function shortLinks ({myLink}) {
     const apiURL = `https://api.shrtco.de/v2/shorten?url=${myLink}`
     return fetch(apiURL)
