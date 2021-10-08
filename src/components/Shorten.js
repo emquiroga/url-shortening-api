@@ -5,7 +5,7 @@ import { Shortened } from "./Shortened";
 
 export const Shorten = () => {
 
-    const [value, setValue] = useState(' ')
+    const [value, setValue] = useState('')
     const handleChange = (event) => {
         setValue(event.target.value)
     }
