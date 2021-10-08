@@ -51,6 +51,18 @@ cursor: pointer;
 `
 export const Shortened = ({src, link}) => {
     const [copy, setCopy] = useState(false)
+
+    function getLink () {
+        let cb = navigator.clipboard;
+        let paragraph = document.getElementById('link')
+        cb.writeText(paragraph.innerText)
+        return cb
+    }
+    function copyLink () {
+        setCopy(!copy)
+        getLink()
+    }
+    
     return(
         <div className="shortened-wrapper">
             <p className="link-for">
@@ -62,6 +74,7 @@ export const Shortened = ({src, link}) => {
                 href={`https://${link}`}
                 target="_blank"
                 rel="noreferrer"
+                id="link"
                 >
                     {link}
                 </a>
@@ -69,12 +82,12 @@ export const Shortened = ({src, link}) => {
             {copy === false
             ?
             <CopyBtn
-            onClick={()=>setCopy(!copy)}>
+            onClick={copyLink}>
             Copy
             </CopyBtn>
             :
             <CopiedBtn
-            onClick={()=>setCopy(!copy)}>
+            onClick={copyLink}>
                 Copied!
             </CopiedBtn>
             }
